@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+import React, {useState, useEffect, useCallback} from 'react';
+import Channel from './Channel.js'
 import './App.css';
 
 function App() {
+  const [currentChannel, setCurrentChannel] = useState(27);
+
+  const goToChannel = (channel) => {
+    setCurrentChannel(channel)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Channel currentChannel = {currentChannel} goToChannel = {goToChannel} />
     </div>
   );
 }
