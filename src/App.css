@@ -1,3 +1,16 @@
 .App {
   text-align: center;
+  width: 100%;
+}
+.header{
+  display: flex;
+  justify-content:space-around;
+  width: 100%;
+}
+.input {
+  border: none;
+}
+
+.input:focus {
+  outline: none;
 }
